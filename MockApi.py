@@ -16,6 +16,10 @@ logging.basicConfig(level=logging.INFO)
 #     "disturb": "true"
 # }
 
+@app.route('/')
+def home():
+    return 'Hello, world!!!'
+
 def validate_input(data, required_fields):
     missing_fields = [field for field in required_fields if field not in data]
     if missing_fields:
@@ -95,4 +99,4 @@ def disturb():
         return jsonify({"status": "success", "message": "Your location is no longer shared"})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
