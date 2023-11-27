@@ -95,4 +95,4 @@ def disturb():
         return jsonify({"status": "success", "message": "Your location is no longer shared"})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    app.run(debug=True, port=8100)
